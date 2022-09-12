@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ifconfigme = {editable = true, path = "."}
+
+[dev-packages]
+mypy = "*"
+pytest = "*"
+flake8 = "*"
+flake8-import-order = "*"
+pyright = "*"
+
+[scripts]
+lint = "flake8 --ignore=E501 --show-source ."
+format = "autopep8 -ivr ."
+
+[requires]
+python_version = "3.9"
